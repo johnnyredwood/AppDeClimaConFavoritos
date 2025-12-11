@@ -1,10 +1,11 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http; // Importación correcta
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 //Data Provider
 class ClimaServicio {
-  static const String apiKey =
-      '06d231829dff207ff309f4c129ae62ca'; //  Nueva API Key
+  static final String apiKey =
+      dotenv.env['API_KEY'] ?? ''; //  Nueva API Key
   static const String baseUrl =
       'https://api.openweathermap.org/data/2.5/weather';
 
